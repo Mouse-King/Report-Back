@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify your email to completed registration.</title>
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+      .container {
+        max-width: 960px;
+        font-size: 18px;
+        margin: auto;
+        padding: 0 2rem;
+      }
+      .header {
+        padding: 1rem;
+        background: #f5f5f5;
+        text-align: center;
+        border-bottom: 1px solid #cccccc;
+      }
+      .logo {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+      }
+      .content {
+        padding: 1rem 1.5rem;
+      }
+      .mt-1 {
+        margin-top: 0.5rem;
+      }
+      .my-2 {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .mb-2 {
+        margin-bottom: 2rem;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .btn {
+        background: #0bae6b;
+        color: #fafafa !important;
+        display: inline-block;
+        padding: 0.7rem 3rem;
+        font-size: 16px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .footer {
+        padding: 1.5rem 1.5rem;
+        background: #f5f5f5;
+        color: #898989;
+        border-top: 1px solid #cccccc;
+      }
+      .footer-logo {
+        max-width: 180px;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="{{ logoUrl }}" class="logo" alt="logo" />
+      </div>
+      <div class="content">
+        <h2>Verify your email to completed registration</h2>
+        <p>Hi {{ name }},</p>
+        <p class="mb-2">
+          Thanks for your interesting in joining YourtextGuru! To complete your
+          registration, you need to verify your email.
+        </p>
+        <div class="text-center mb-2">
+          <a class="btn" href="{{ verifyUrl }}">Verify Email</a>
+        </div>
+        <p>Thanks for your time</p>
+        <p>The YourtextGuru Team</p>
+      </div>
+      <div class="footer">
+        <img src="{{ logoUrl }}" class="footer-logo" alt="logo" />
+        <p class="mt-1">
+          This email may contain confidential information intended solely for
+          the recipient. If you have received this email in error, please notify
+          the sender immediately and delete it from your system.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
