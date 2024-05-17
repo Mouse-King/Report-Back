@@ -34,7 +34,7 @@ const login = async (req, res) => {
     const data = req.body;
     const user = await UserModel.findOne({
       email: data.email.toLowerCase(),
-    });
+    }).populate('reports');
 
     if (user) {
         if (bcrypt.compareSync(data.password, user.password)) {
@@ -91,7 +91,7 @@ const me = async (req, res) => {
       })
     }
 
-    const data = await UserModel.findById(user.id);
+    const data = await UserModel.findById(user.id).populate('reports');
     if (!data) {
       return res.json({
         status: false
